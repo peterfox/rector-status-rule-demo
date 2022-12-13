@@ -9,5 +9,6 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/tests',
     ]);
 
+    $rectorConfig->phpstanConfig(__DIR__ . '/phpstan.neon');
     $rectorConfig->rule(\RectorLaravel\Rector\MethodCall\AssertStatusToAssertMethodRector::class);
 };
